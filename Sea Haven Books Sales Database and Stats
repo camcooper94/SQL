@@ -1,0 +1,27 @@
+--Create a bookstore database for the Sea Haven novels from Christine Feehan
+
+/** Sea Haven Books:
+Water Bound (3 , 10)
+Spirit Bound (5, 12)
+Air Bound (7, 10)
+Earth Bound (4), 15
+Fire Bound (8, 14)
+Bound Together (2, 19)
+**/
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, quantity_sold INTEGER, price INTEGER);
+
+INSERT INTO
+books
+values
+(1, "Water Bound", 3, 10),
+(2, "Spirit Bound", 5, 12),
+(3, "Air Bound", 7, 10),
+(4, "Earth Bound", 4, 15),
+(5, "Fire Bound", 8, 14),
+(6, "Bound Together", 2, 19);
+
+--display the database ordered by price where the quantity of books sold is 5 or more.
+SELECT * FROM books
+WHERE quantity_sold >= 5
+ORDER BY price desc;
